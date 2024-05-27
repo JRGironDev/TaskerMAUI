@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tasker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b77b9b0aa10978c2f8ef8ce79833fae9d13b5050")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+29c21394c13adc580ac45c4697dddbbe2b202d0a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tasker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tasker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
