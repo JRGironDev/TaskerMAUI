@@ -32,6 +32,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
+                            <RoundRectangle/>
                             <VerticalStackLayout
                                 Padding="15"
                                 Spacing="10">
