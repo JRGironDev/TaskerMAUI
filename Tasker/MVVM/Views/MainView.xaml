@@ -10,7 +10,34 @@
             StyleClass="DarkBlue, Header"/>
         <Grid
             Grid.Row="1"
-            BackgroundColor="DarkRed"/>
+            RowDefinitions=".2*, .8*">
+            <Label
+                Text="Categories"
+                StyleClass="LightBlue, SubHeader"/>
+
+            <CollectionView
+                Grid.Row="1"
+                ItemsSource="{Binding Categories}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout
+                        Orientation="Horizontal"
+                        ItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <VerticalStackLayout
+                                Padding="15"
+                                Spacing="10">
+                                <Label
+                                    StyleClass="LightBlue, CardTitle"
+                                    Text="{Binding CategoryName}"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
         <Grid
             Grid.Row="2"
             BackgroundColor="DarkGoldenrod"/>

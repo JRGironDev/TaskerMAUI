@@ -6,24 +6,40 @@
     <Color x:Key="LightBlue">#8A88A6</Color>
 
     <Style Class="DarkBlue"
-            TargetType="Label">
+           TargetType="Label">
         <Setter Property="TextColor"
                 Value="{StaticResource DarkBlue}"/>
     </Style>
 
     <Style Class="LightBlue"
-            TargetType="Label">
+           TargetType="Label">
         <Setter Property="TextColor"
                 Value="{StaticResource LightBlue}"/>
     </Style>
 
     <Style Class="Header"
-            TargetType="Label">
+           TargetType="Label">
         <Setter Property="FontSize"
                 Value="Title"/>
         <Setter Property="FontAttributes"
                 Value="Bold"/>
         <Setter Property="VerticalOptions"
                 Value="Center"/>
+    </Style>
+
+    <Style Class="SubHeader"
+           TargetType="Label">
+        <Setter Property="FontSize"
+                Value="Medium"/>
+        <Setter Property="VerticalOptions"
+                Value="Center"/>
+    </Style>
+
+    <Style Class="CardTitle"
+           TargetType="Label">
+        <Setter Property="FontSize"
+                Value="Medium"/>
+        <Setter Property="FontAttributes"
+                Value="Bold"/>
     </Style>
 </ResourceDictionary>
