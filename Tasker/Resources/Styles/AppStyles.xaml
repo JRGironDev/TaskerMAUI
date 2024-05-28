@@ -87,8 +87,6 @@
                         Value="100"/>
                 <Setter Property="HeightRequest"
                         Value="100"/>
-                <Setter Property="BackgroundColor"
-                        Value="{StaticResource LightBlue}"/>
                 <Setter Property="TextColor"
                         Value="White"/>
                 <Setter Property="FontAttributes"

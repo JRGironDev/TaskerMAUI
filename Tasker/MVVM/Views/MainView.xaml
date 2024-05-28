@@ -60,7 +60,8 @@
                 StyleClass="LightBlue, SubHeader"/>
             <CollectionView
                 Grid.Row="1"
-                ItemsSource="{Binding Tasks}">
+                ItemsSource="{Binding Tasks}"
+                ItemsUpdatingScrollMode="KeepLastItemInView">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame BorderColor="Transparent">
