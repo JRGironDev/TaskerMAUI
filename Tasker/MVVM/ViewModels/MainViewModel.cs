@@ -1,8 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using PropertyChanged;
 using Tasker.MVVM.Models;
 
 namespace Tasker.MVVM.ViewModels;
 
+[AddINotifyPropertyChangedInterface]
 public class MainViewModel
 {
     public ObservableCollection<Category> Categories { get; set; }

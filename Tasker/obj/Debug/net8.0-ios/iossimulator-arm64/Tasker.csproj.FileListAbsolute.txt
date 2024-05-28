@@ -312,3 +312,5 @@
 /Users/josequinonez/C#/MAUI/Tasker/Tasker/obj/Debug/net8.0-ios/iossimulator-arm64/Tasker.genruntimeconfig.cache
 /Users/josequinonez/C#/MAUI/Tasker/Tasker/obj/Debug/net8.0-ios/iossimulator-arm64/ref/Tasker.dll
 /Users/josequinonez/C#/MAUI/Tasker/Tasker/obj/Debug/net8.0-ios/iossimulator-arm64/resizetizer/f/Roboto-Regular.ttf
+/Users/josequinonez/C#/MAUI/Tasker/Tasker/obj/Debug/net8.0-ios/iossimulator-arm64/Tasker.csproj.Fody.CopyLocal.cache
+/Users/josequinonez/C#/MAUI/Tasker/Tasker/obj/Debug/net8.0-ios/iossimulator-arm64/Tasker.csproj.Fody.RuntimeCopyLocal.cache

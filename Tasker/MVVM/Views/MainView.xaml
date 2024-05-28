@@ -23,7 +23,8 @@
 
             <CollectionView
                 Grid.Row="1"
-                ItemsSource="{Binding Categories}">
+                ItemsSource="{Binding Categories}"
+                HorizontalScrollBarVisibility="Never">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout
                         Orientation="Horizontal"
@@ -43,7 +44,7 @@
                                     Text="{Binding CategoryName}"/>
 
                                 <ProgressBar
-                                    Progress=".5"
+                                    Progress="{Binding Percentage}"
                                     ProgressColor="{Binding Color, Converter={StaticResource ColorConverter}}"/>
                             </VerticalStackLayout>
                         </Grid>
@@ -53,6 +54,43 @@
         </Grid>
         <Grid
             Grid.Row="2"
-            BackgroundColor="DarkGoldenrod"/>
+            RowDefinitions=".2*, .8*">
+            <Label
+                Text="Pending Tasks"
+                StyleClass="LightBlue, SubHeader"/>
+            <CollectionView
+                Grid.Row="1"
+                ItemsSource="{Binding Tasks}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Transparent">
+                            <HorizontalStackLayout>
+                                <CheckBox
+                                    x:Name="CheckBox"
+                                    IsChecked="{Binding Completed}"
+                                    VerticalOptions="Center"
+                                    Color="{Binding TaskColor, Converter={StaticResource ColorConverter}}"
+                                    CheckedChanged="checkBox_CheckedChanged"/>
+
+                                <Label
+                                    Text="{Binding TaskName}"
+                                    VerticalOptions="Center">
+                                    <Label.Triggers>
+                                        <DataTrigger 
+                                            TargetType="Label"
+                                            Binding="{Binding Source={x:Reference CheckBox}, Path=IsChecked}"
+                                            Value="True">
+                                            <Setter 
+                                                Property="TextDecorations"
+                                                Value="Strikethrough"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </Grid>
 </ContentPage>
