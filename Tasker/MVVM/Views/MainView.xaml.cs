@@ -1,4 +1,5 @@
 using Tasker.MVVM.ViewModels;
+using Tasker.MVVM.Views;
 
 namespace TASKER.MVVM.Views;
 
@@ -16,5 +17,19 @@ public partial class MainView : ContentPage
 	private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
 	{
 		mainViewModel.UpdateData();
+	}
+
+	private void Button_Clicked(object sender, EventArgs e)
+	{
+		var taskView = new NewTaskView
+		{
+			BindingContext = new NewTaskViewModel
+			{
+				Tasks = mainViewModel.Tasks,
+				Categories = mainViewModel.Categories,
+			}
+		};
+
+		Navigation.PushAsync(taskView);
 	}
 }

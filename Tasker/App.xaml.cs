@@ -1,4 +1,5 @@
-﻿using TASKER.MVVM.Views;
+﻿using Tasker.MVVM.Views;
+using TASKER.MVVM.Views;
 
 namespace Tasker;
 
@@ -8,6 +9,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new MainView();
+		MainPage = new NavigationPage(new MainView());
 	}
 }
